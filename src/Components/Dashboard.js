@@ -1,8 +1,47 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import 'bootstrap-icons/font/bootstrap-icons.css'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2';
 
 export default function Dashboard() {
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        fetch("http://localhost:5000/admindata", {
+          method: "POST",
+          crossDomain: true,
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          body: JSON.stringify({
+            token: window.localStorage.getItem("token"),
+          }),
+        })
+          .then((res) => res.json())
+          .then((result) => {
+            if(result.data.message === "VERIFIED"){
+                Swal.fire({
+                    icon: "success",
+                    text: result.data.message
+                  });
+                navigate('/')
+            }
+            else{
+                Swal.fire({
+                    icon: "error",
+                    text: `Token ${result.data.message}`
+                })
+            }
+          });
+      }, []);
+
+    function handleLogout() {
+        window.localStorage.clear();
+        navigate("/start");
+    }
+
   return (
     <div className="container-fluid">
     <div className="row flex-nowrap">
@@ -25,8 +64,8 @@ export default function Dashboard() {
                             <i className="fs-4 bi-person"></i> <span className="ms-1 d-none d-sm-inline">User Profile</span></Link>
                     </li>
                     <li>
-                        <a href="#" className="nav-link px-0 align-middle text-white">
-                            <i className="fs-4 bi-power"></i> <span className="ms-1 d-none d-sm-inline">Logout</span></a>
+                        <button className="nav-link px-0 align-middle text-white">
+                            <i className="fs-4 bi-power"></i> <span className="ms-1 d-none d-sm-inline" onClick={handleLogout}>Logout</span></button>
                     </li>
                 </ul>
             </div>
