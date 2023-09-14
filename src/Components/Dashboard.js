@@ -21,17 +21,13 @@ export default function Dashboard() {
         })
           .then((res) => res.json())
           .then((result) => {
-            if(result.data.message === "VERIFIED"){
-                Swal.fire({
-                    icon: "success",
-                    text: result.data.message
-                  });
-                navigate('/')
+            if(result.message === "VERIFIED"){
+                navigate('/dashboard')
             }
             else{
                 Swal.fire({
                     icon: "error",
-                    text: `Token ${result.data.message}`
+                    text: `Token ${result.message}`
                 })
             }
           });
@@ -39,7 +35,7 @@ export default function Dashboard() {
 
     function handleLogout() {
         window.localStorage.clear();
-        navigate("/start");
+        navigate("/");
     }
 
   return (
@@ -47,20 +43,20 @@ export default function Dashboard() {
     <div className="row flex-nowrap">
         <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
             <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                <a href="/" className="d-flex align-items-center pb-3 mb-md-1 mt-md-3 me-md-auto text-white text-decoration-none">
+                <a href="/dashboard" className="d-flex align-items-center pb-3 mb-md-1 mt-md-3 me-md-auto text-white text-decoration-none">
                     <span className="fs-5 fw-bolder d-none d-sm-inline">Admin Dashboard</span>
                 </a>
                 <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li>
-                        <Link to="/" data-bs-toggle="collapse" className="nav-link text-white px-0 align-middle">
+                        <Link to="/dashboard" data-bs-toggle="collapse" className="nav-link text-white px-0 align-middle">
                             <i className="fs-4 bi-speedometer2"></i> <span className="ms-1 d-none d-sm-inline">Dashboard</span> </Link>
                     </li>
                     <li>
-                        <Link to="/productdetails" className="nav-link px-0 align-middle text-white">
+                        <Link to="/dashboard/productdetails" className="nav-link px-0 align-middle text-white">
                             <i className="fs-4 bi-people"></i> <span className="ms-1 d-none d-sm-inline">Manage Products</span> </Link>
                     </li>
                     <li>
-                        <Link to="/userdetails" className="nav-link px-0 align-middle text-white">
+                        <Link to="/dashboard/userdetails" className="nav-link px-0 align-middle text-white">
                             <i className="fs-4 bi-person"></i> <span className="ms-1 d-none d-sm-inline">User Profile</span></Link>
                     </li>
                     <li>

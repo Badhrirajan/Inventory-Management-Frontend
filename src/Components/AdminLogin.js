@@ -24,12 +24,12 @@ export default function AdminLogin() {
           .then((res) => res.json())
           .then((result) => {
             if (result.message === "Success") {
-                window.localStorage.setAdmin("token",result.data)
+                window.localStorage.setItem("token",result.data)
               Swal.fire({
                 icon: "success",
                 text: "Login Successfully!!"
               });
-              navigate('/')
+              navigate('/dashboard')
             } else {
               Swal.fire({
                 icon: "error",
@@ -80,7 +80,7 @@ export default function AdminLogin() {
           </div>
           <div className="row">
             <div class="d-grid gap-2 col-6 mx-auto">
-              <button type="submit" className="btn btn-success mt-3" onClick={e => navigate('/')}>
+              <button type="submit" className="btn btn-success mt-3">
                 Login
               </button>
             </div>

@@ -30,3 +30,19 @@ input{
   border-radius: 5px;
   color: black;
 }
+
+.addproduct > label {
+  color: black;
+  font-weight: bold;
+}
+
+.addproduct > input {
+    width: 50%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+}

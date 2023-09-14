@@ -95,7 +95,7 @@ export default function AdminSign() {
           </div>
           <div className="row">
             <div class="d-grid gap-2 col-6 mx-auto">
-              <button type="submit" className="btn btn-success mt-3" onClick={e => navigate('/adminlogin')}>
+              <button type="submit" className="btn btn-success mt-3">
                 SignUp
               </button>
             </div>

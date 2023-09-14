@@ -10,6 +10,7 @@ import Home from "./Components/Home";
 import ProductDetails from "./Components/ProductDetails";
 import AddProducts from "./Components/AddProducts";
 import UserDetails from "./Components/UserDetails";
+import EditProduct from "./Components/EditProduct";
 
 
 function App() {
@@ -17,13 +18,14 @@ function App() {
     <BrowserRouter>
     <div className="App">
       <Routes>
-        <Route path='/' element={<Dashboard />}>
+        <Route path='/dashboard' element={<Dashboard />}>
           <Route path='' element={<Home />}></Route>
-            <Route path='/productdetails' element={<ProductDetails />}></Route>
-            <Route path='/prouductdetails/:id' element={<AddProducts />}></Route>
-            <Route path='/userdetails' element={<UserDetails />}></Route>
+            <Route path='/dashboard/productdetails' element={<ProductDetails />}></Route>
+            <Route path='/dashboard/productdetails/addproduct' element={<AddProducts />}></Route>
+            <Route path='/dashboard/productdetails/editproduct/:id' element={<EditProduct />}></Route>
+            <Route path='/dashboard/userdetails' element={<UserDetails />}></Route>
           </Route>
-        <Route path='/start' element={<Startpage />} />
+        <Route path='/' element={<Startpage />} />
         <Route path='/createadmin' element={<AdminSign />} />
         <Route path='/adminlogin' element={<AdminLogin />} />
         <Route path='/email' element={<Email />} />
