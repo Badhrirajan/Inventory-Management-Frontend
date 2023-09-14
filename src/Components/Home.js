@@ -6,20 +6,10 @@ export default function Home() {
   // const [category, setCategory] = useState()
 
   useEffect(() => {
-    fetch("http://localhost:5000/itemcount")
+    fetch("http://localhost:5000/productcount")
       .then((res) => res.json())
-      .then((result) => {
-        setCount(result)
-      });
+      .then((result) => setCount(result));
   }, []);
-
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/categorycount")
-  //     .then((res) => res.json())
-  //     .then((result) => {
-  //       setCategory(result);
-  //     });
-  // }, []);
 
   return (
     <div className="p-3 bg-light">
@@ -30,7 +20,7 @@ export default function Home() {
             <i className="bi bi-cart-check-fill fs-1"></i>
             <div>
               <span>Total Product</span>
-              <h2>12</h2>
+              <h2>{count}</h2>
             </div>
           </div>
           </div>
