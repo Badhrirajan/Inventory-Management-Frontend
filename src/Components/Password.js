@@ -31,7 +31,7 @@ export default function Password() {
               icon: "success",
               text: "Password Updated Successfully!!",
             });
-            navigate('/adminlogin')
+            navigate('/')
           }
         });
     };
@@ -55,7 +55,7 @@ export default function Password() {
           />
         </div>
         <div class="d-grid gap-2 d-md-block mt-3">
-            <button class="btn btn-danger" type="button">
+            <button class="btn btn-danger" type="submit">
               Reset Password
             </button>
           </div>

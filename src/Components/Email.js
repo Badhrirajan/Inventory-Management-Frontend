@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
 import Swal from "sweetalert2";
 
 export default function Email() {
@@ -25,7 +25,7 @@ export default function Email() {
             icon: "success",
             text: result,
           });
-          navigate('/adminlogin')
+          navigate('/')
         } else{
             Swal.fire({
                 icon: "error",
@@ -54,10 +54,9 @@ export default function Email() {
             />
           </div>
           <div class="d-grid gap-2 d-md-block mt-3">
-            <Link to='/resetpassword'><button class="btn btn-dark text-white" type="button">
+            <button class="btn btn-dark text-white" type="button">
               Send Link
             </button>
-            </Link>
           </div>
         </form>
       </div>
