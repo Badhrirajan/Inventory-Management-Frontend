@@ -1,7 +1,7 @@
 LOGIN AS ADMIN
-badhrirajan2211@gmail.com
-Badhri@2211
+Username:badhrirajan2211@gmail.com
+Password:Badhri@2211
 
 LOGIN AS USER
-user1@gmail.com
-User1@2211
+Username:user1@gmail.com
+Password:User1@2211
