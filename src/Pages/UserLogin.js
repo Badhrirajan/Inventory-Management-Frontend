@@ -11,7 +11,7 @@ export default function UserLogin() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch("http://localhost:5000/userlogin", {
+        fetch("https://inventory-backend-2s3n.onrender.com/userlogin", {
           method: "POST",
           crossDomain: true,
           headers: {

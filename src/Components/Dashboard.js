@@ -7,7 +7,7 @@ export default function Dashboard() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch("http://localhost:5000/admindata", {
+        fetch("https://inventory-backend-2s3n.onrender.com/admindata", {
           method: "POST",
           crossDomain: true,
           headers: {

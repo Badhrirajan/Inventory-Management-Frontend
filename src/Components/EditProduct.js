@@ -10,7 +10,7 @@ export default function EditProduct() {
     const navigate = useNavigate()
 
     useEffect(() => {
-      fetch('http://localhost:5000/product/'+id)
+      fetch('https://inventory-backend-2s3n.onrender.com/product/'+id)
       .then((res) => res.json())
       .then((result) => {
         setName(result.Name)
@@ -23,7 +23,7 @@ export default function EditProduct() {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      fetch("http://localhost:5000/updateproduct/"+id, {
+      fetch("https://inventory-backend-2s3n.onrender.com/updateproduct/"+id, {
         method: "PUT",
         crossDomain: true,
         headers: {

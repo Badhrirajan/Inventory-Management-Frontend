@@ -10,7 +10,7 @@ export default function Orderproduct() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('http://localhost:5000/product/'+id)
+    fetch('https://inventory-backend-2s3n.onrender.com/product/'+id)
     .then((res) => res.json())
     .then((result) => {
       setName(result.Name)
@@ -21,7 +21,7 @@ export default function Orderproduct() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/orderproduct", {
+    fetch("https://inventory-backend-2s3n.onrender.com/orderproduct", {
       method: "POST",
       crossDomain: true,
       headers: {

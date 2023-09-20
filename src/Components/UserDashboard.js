@@ -7,7 +7,7 @@ export default function UserDashboard() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch("http://localhost:5000/userdata", {
+        fetch("https://inventory-backend-2s3n.onrender.com/userdata", {
           method: "POST",
           crossDomain: true,
           headers: {

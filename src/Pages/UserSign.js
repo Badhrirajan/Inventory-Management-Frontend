@@ -12,7 +12,7 @@ export default function UserSign() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/createuser", {
+    fetch("https://inventory-backend-2s3n.onrender.com/createuser", {
       method: "POST",
       crossDomain: true,
       headers: {

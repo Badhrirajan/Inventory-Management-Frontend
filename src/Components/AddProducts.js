@@ -13,7 +13,7 @@ export default function AddProducts() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/createproduct", {
+    fetch("https://inventory-backend-2s3n.onrender.com/createproduct", {
       method: "POST",
       crossDomain: true,
       headers: {

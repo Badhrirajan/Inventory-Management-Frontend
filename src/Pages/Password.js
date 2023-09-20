@@ -9,7 +9,7 @@ export default function Password() {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      fetch(`http://localhost:5000/reset-password/${id}/${token}`, {
+      fetch(`https://inventory-backend-2s3n.onrender.com/reset-password/${id}/${token}`, {
         method: "POST",
         crossDomain: true,
         headers: {

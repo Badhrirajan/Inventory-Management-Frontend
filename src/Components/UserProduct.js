@@ -5,7 +5,7 @@ export default function ProductDetails() {
   const [product, setProduct] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:5000/getproduct")
+    fetch("https://inventory-backend-2s3n.onrender.com/getproduct")
       .then((res) => res.json())
       .then((result) => {
         setProduct(result);

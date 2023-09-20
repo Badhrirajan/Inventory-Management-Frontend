@@ -12,7 +12,7 @@ export default function AdminSign() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/createadmin", {
+    fetch("https://inventory-backend-2s3n.onrender.com/createadmin", {
       method: "POST",
       crossDomain: true,
       headers: {

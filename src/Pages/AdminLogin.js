@@ -11,7 +11,7 @@ export default function AdminLogin() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch("http://localhost:5000/adlogin", {
+        fetch("https://inventory-backend-2s3n.onrender.com/adlogin", {
           method: "POST",
           crossDomain: true,
           headers: {

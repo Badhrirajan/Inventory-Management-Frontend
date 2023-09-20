@@ -4,7 +4,7 @@ export default function Orderdetails() {
     const [order,setOrder] = useState()
 
     useEffect(() => {
-        fetch('http://localhost:5000/getorders')
+        fetch('https://inventory-backend-2s3n.onrender.com/getorders')
         .then((res) => res.json())
         .then((result) => setOrder(result))
     },[])

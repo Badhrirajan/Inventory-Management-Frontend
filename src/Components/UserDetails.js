@@ -4,7 +4,7 @@ export default function UserDetails() {
   const [user, setUser] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:5000/getuser")
+    fetch("https://inventory-backend-2s3n.onrender.com/getuser")
       .then((res) => res.json())
       .then((result) => {
         setUser(result);

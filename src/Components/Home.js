@@ -10,19 +10,19 @@ export default function Home() {
   const [admin,setAdmin] = useState()
 
   useEffect(() => {
-    fetch("http://localhost:5000/productcount")
+    fetch("https://inventory-backend-2s3n.onrender.com/productcount")
       .then((res) => res.json())
       .then((result) => setCount(result));
 
-    fetch("http://localhost:5000/usercount")
+    fetch("https://inventory-backend-2s3n.onrender.com/usercount")
       .then((res) => res.json())
       .then((result) => setUser(result));
 
-    fetch("http://localhost:5000/ordercount")
+    fetch("https://inventory-backend-2s3n.onrender.com/ordercount")
       .then((res) => res.json())
       .then((result) => setOrder(result));
 
-    fetch("http://localhost:5000/admincount")
+    fetch("https://inventory-backend-2s3n.onrender.com/admincount")
       .then((res) => res.json())
       .then((result) => setAdmin(result));  
   }, []);

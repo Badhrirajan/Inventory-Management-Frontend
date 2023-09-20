@@ -8,7 +8,7 @@ export default function Email() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/forgot-password", {
+    fetch("https://inventory-backend-2s3n.onrender.com/forgot-password", {
       method: "POST",
       crossDomain: true,
       headers: {

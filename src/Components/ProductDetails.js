@@ -6,7 +6,7 @@ export default function ProductDetails() {
   const [product, setProduct] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:5000/getproduct")
+    fetch("https://inventory-backend-2s3n.onrender.com/getproduct")
       .then((res) => res.json())
       .then((result) => {
         setProduct(result);
@@ -14,7 +14,7 @@ export default function ProductDetails() {
   }, []);
 
   function handleDelete(id){
-    fetch('http://localhost:5000/deleteproduct/'+id,{method: "DELETE"})
+    fetch('https://inventory-backend-2s3n.onrender.com/deleteproduct/'+id,{method: "DELETE"})
     .then((res) => res.json())
     .then((result) => {
       if(result === 'Deleted'){
