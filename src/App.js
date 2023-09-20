@@ -16,6 +16,7 @@ import UserLogin from "./Pages/UserLogin";
 import UserDashboard from "./Components/UserDashboard";
 import UserProduct from "./Components/UserProduct";
 import Orderproduct from "./Components/Orderproduct";
+import Orderdetails from "./Components/Orderdetails";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path='/dashboard/productdetails/addproduct' element={<AddProducts />}></Route>
             <Route path='/dashboard/productdetails/editproduct/:id' element={<EditProduct />}></Route>
             <Route path='/dashboard/userdetails' element={<UserDetails />}></Route>
+            <Route path='/dashboard/orderdetails' element={<Orderdetails />}></Route>
           </Route>
           <Route path='/userdashboard' element={<UserDashboard />}>
             <Route path='' element={<UserProduct />}></Route>

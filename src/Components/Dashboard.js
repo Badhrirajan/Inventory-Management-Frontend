@@ -60,6 +60,10 @@ export default function Dashboard() {
                             <i className="fs-4 bi-person"></i> <span className="ms-1 d-none d-sm-inline">User Profile</span></Link>
                     </li>
                     <li>
+                        <Link to="/dashboard/orderdetails" className="nav-link px-0 align-middle text-white">
+                            <i className="fs-4 bi-cart-fill"></i> <span className="ms-1 d-none d-sm-inline">Recent Orders</span></Link>
+                    </li>
+                    <li>
                         <button className="nav-link px-0 align-middle text-white">
                             <i className="fs-4 bi-power"></i> <span className="ms-1 d-none d-sm-inline" onClick={handleLogout}>Logout</span></button>
                     </li>

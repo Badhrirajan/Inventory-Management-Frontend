@@ -34,14 +34,14 @@ const options = {
   },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = ['January', 'February', 'March', 'April'];
 
 const data = {
   labels,
   datasets: [
     {
-      label: 'Revenue',
-      data: [45000,60000,0,0,20000,10000,4000],
+      label: 'Orders',
+      data: [1,1,1,1],
       borderColor: 'rgb(255, 99, 132)',
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
     }
